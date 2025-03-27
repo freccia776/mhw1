@@ -1,0 +1,488 @@
+body{
+    background-color: rgba(26,28,40,255);
+    margin: 0; 
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    font-family: "Roboto", sans-serif;
+    
+  }
+
+  
+
+  .navbar {
+    position: fixed;
+    top: 0;  
+    left: 0;
+    width: 100%;
+    height: 3.5%;
+    padding: 15px 20px; 
+    background: rgba(16, 17, 25, 0.9); 
+    display: flex;
+    justify-content: space-between; 
+    z-index: 1000; 
+    
+   
+}
+
+.menu{
+  display: none;
+  margin-right: 20px;
+}
+
+.linea{
+  width: 18px;
+  height: 2px;
+  background-color: grey;
+  margin: 5px 0;
+}
+
+@media (max-width: 1023px) {
+  #links {
+    display: none;
+  }
+
+  .menu {
+    display: block;
+    
+  }
+
+}
+
+
+  .sinistra .logo {
+    width: 100px;
+    height: auto;   
+    margin-right: 20px; 
+    
+}
+
+.sinistra ul {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+
+.sinistra ul li {
+    margin-left: 15px; 
+}
+
+.sinistra ul li a {
+    color: grey;
+    text-decoration: none;
+    font-size: 18px;
+   
+}
+.sinistra ul li a:hover{
+  color: rgb(16, 194, 185); 
+  
+}
+
+.sinistra{
+  display: flex;
+  align-items: center;
+  margin-left: 1.5%;
+  
+
+}
+
+
+.destra{
+  display: flex;
+  align-items: center;
+  margin-right: 4%;  
+  
+}
+
+.autenticazione ul{
+  list-style: none;
+  display: flex;
+  padding: 0;
+  margin: 0;
+  
+}
+
+.autenticazione ul li{
+  margin-left: 15px;
+}
+
+.autenticazione button{
+  border: 2px solid rgb(16, 194, 185);
+ 
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 24px;
+  padding: 5px 20px;  
+  display: inline-block; 
+
+}
+
+.autenticazione #registrati{
+  background-color: rgb(16, 194, 185);
+  color: rgba(26,28,40,1);
+   
+}
+
+.autenticazione #accedi{
+  background-color: rgba(26,28,40,1);
+  color: rgb(16, 194, 185);
+}
+
+
+.autenticazione #accedi:hover{
+  background-color: rgb(16, 194, 185);
+  color: rgba(26,28,40,1);
+}
+
+.profilo{
+  height: 35px;
+  width: 35px;
+  background-size: 35px;
+  display: none;
+}
+
+.search-container{
+  display: flex;
+  align-items: center;
+  padding: 1px 20px;
+  overflow: hidden;
+  border-radius: 24px;
+  background-color: rgba(26, 28, 40, 1);
+}
+
+.search-container:hover{
+  border: 1px solid rgb(16, 194, 185);
+}
+
+.search-container input{
+  border:none;
+  background-color: transparent;
+  color: grey;
+  outline: none;
+  font-size: 14px;
+  
+}
+
+.search-container button{
+  
+  width: 30px;
+  height: 30px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer; 
+  background-image: url('./icon/searchbutton.svg');
+  background-size: 30px; 
+  
+}
+
+
+@media (max-width: 1023px) {
+ 
+  .search-container{
+    background-color: transparent;
+    border-radius: unset;
+    padding: unset;
+   
+  }
+
+  .search-container input{
+    display: none;
+    
+  }
+
+
+  .search-container button{
+    
+    width: 35px;
+    height: 35px; 
+    background-size: 35px;
+    margin-right: 10px;
+  }
+
+  .autenticazione{
+    display: none;
+  }
+
+  .profilo{
+    display: block;
+  }
+
+  .destra{
+    margin-right: 7%;
+  }
+
+}
+
+#overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: linear-gradient(to right, rgba(26, 28, 40, 1) 0%, rgba(26, 28, 40, 0) 100%);
+  
+}
+
+
+.img-primapagina {
+   
+  width: 100%;
+  align-items: center; 
+  position: relative;
+  overflow: hidden; 
+  white-space: nowrap; 
+  cursor: pointer;
+  
+  
+}
+
+
+.img-primapagina img{
+  width: 100%; 
+  height: auto; 
+  
+}
+
+
+.contenuto{
+  position: absolute;
+  left: 2%;
+  bottom: 10%; 
+  color: white; 
+}
+
+.contenuto p{
+  color: grey;
+  font-weight: bold;
+}
+
+.contenuto a{
+  background-color: rgb(16, 194, 185);
+  color: rgba(26,28,40,255);
+  padding: 10px;
+  border-radius: 12px;
+  font-weight: bold;
+  
+}
+
+
+.contenuto button {
+  padding: 10px 20px;
+  background-color: #16c2b9; 
+  border: none;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+
+}
+
+@media (max-width: 1023px){
+
+  .contenuto{
+    left: 0;
+    position: relative;
+    text-align: center;
+    
+  }
+
+  #overlay{
+    background: linear-gradient(to top, rgba(26, 28, 40, 1) 0%, rgba(26, 28, 40, 0) 100%);
+  }
+
+}
+
+@media (max-width: 700px){
+
+  .contenuto{
+    font-size: 60%;
+  }
+
+}
+
+
+@media (max-width: 768px) {
+
+  .mini-slider {
+    overflow-x: auto; 
+  }
+
+  .mini-slide {
+    flex: 0 0 auto; 
+    width: 50%; 
+  }
+
+
+}
+
+@media (max-width: 500px) {
+
+  .mini-slider {
+    overflow-x: auto;
+   
+  }
+
+  .mini-slide {
+    flex: 0 0 auto; 
+    width: 80%; 
+    
+  }
+
+}
+
+.sezioni-contenitore{
+  width: 100%;
+  height: 100%; 
+  border-top: 1px solid rgb(16, 194, 185);
+  margin-bottom: 200px; 
+
+}
+
+
+
+.sezione{
+    
+  padding-left: 1.5%;
+  padding-top: 2%;
+  padding-right: 1.5%;
+
+}
+
+.mini-slider{
+ 
+  scrollbar-width: none;
+  -ms-overflow-style: none; 
+  display: flex;
+  justify-content: space-between;
+  overflow-y: hidden;
+  
+}
+
+.mini-slider::-webkit-scrollbar {
+  display: none; 
+}
+
+
+.mini-slide{
+ 
+  flex-grow: 1;
+  padding: 4px;
+  
+}
+
+.mini-slide img {
+  border-radius: 2.5%;
+  width: 100%;
+ 
+}
+
+.mini-slide img:hover {
+  transform: scale(1.1); 
+  
+}
+
+.titolo-sezione{
+  display: flex;
+  
+}
+
+.titolo-sezione h2{
+  color: white;
+  font-size: 18px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.titolo-sezione button{
+  background: rgba(0, 0, 0, 0);
+  border: none;
+  color: grey;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.titolo-sezione button:hover{
+  color: rgb(16, 194, 185);
+  transform: scale(1.1);
+  font-size: 20px;
+  
+}
+
+
+
+.footer-col{
+  display: flex;
+  flex-direction: column;
+  padding: 0px 100px;
+  padding-bottom: 10px;
+  
+
+}
+
+.footer-col h4{
+  font-size: 18px;
+  color: white;
+  margin-bottom: 20px;
+  font-weight: 500;
+  position: relative;
+  
+
+}
+
+.footercol .info-orizzontali{
+  display: flex;
+  
+}
+
+.footer-col a img{
+  cursor: pointer;
+  width: 25px;
+  height: 25px;
+}
+
+
+.footer-col a{
+  color: grey;
+  text-decoration: none;
+}
+
+.footer-col a:hover{
+  color: white;
+  text-decoration: underline;
+}
+
+
+
+footer {
+
+  width: 100%;
+  background: black; 
+  border-top: 1px solid grey;
+  display: flex;
+  justify-content: center;
+  
+  
+}
+
+.contenitore{
+  max-width: 1770px;
+  
+}
+
+.row{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.footer-below{
+  text-align: center;
+  border-top:1px solid grey;
+}
+
+.footer-below p{
+  color: white;
+}
+
+
