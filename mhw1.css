@@ -368,6 +368,7 @@ body{
  
   flex-grow: 1;
   padding: 4px;
+  position: relative;
   
 }
 
@@ -377,10 +378,47 @@ body{
  
 }
 
-.mini-slide img:hover {
-  transform: scale(1.1); 
+.info{
+  
+  position: absolute;
+  bottom: 10;
+  left: 20;
+  display: flex;
+  flex-direction: column;
+  font-weight: bold;
+  visibility: hidden;
+  background: rgba(0, 0, 0, 0.5); 
+  padding: 6px 12px; 
+  border-radius: 5px; 
+  height: 40px;
+  justify-content: center;
+  
   
 }
+
+.info h4{
+  color: white;
+  margin-bottom: 1%;
+
+}
+
+.info p{
+  
+  color: rgb(16, 194, 185);
+  margin-top: 1%;
+  
+}
+
+.mini-slide:hover .info {
+  visibility: visible;
+}
+
+
+.mini-slide img:hover {
+  transform: scale(1.01);
+
+}
+
 
 .titolo-sezione{
   display: flex;
